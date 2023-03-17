@@ -63,4 +63,6 @@ dependencies {
 
     //use Glide
     implementation "com.github.skydoves:landscapist-glide:1.4.7"
+
+    implementation 'com.github.Gurupreet:FontAwesomeCompose:1.0.0'
 }
