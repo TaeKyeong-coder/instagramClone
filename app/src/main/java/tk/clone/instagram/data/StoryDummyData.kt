@@ -1,7 +1,19 @@
 package tk.clone.instagram.data
 
 object StoryDummyData {
-    private val originStory = Story()
+    val originStory = Story(
+        1,
+        "참고 : https://www.youtube.com/watch?v=ps4Ay7XFidM",
+        "Taegomi",
+        "@taegomi",
+        "17m",
+        "https://avatars.githubusercontent.com/u/68893329?v=4",
+        100,
+        12,
+        15,
+        "Twitter for web",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOJh-XwQ_jvK7nQ_38BgAbHcWOPt24YNCaMvYN5CWG04AX4-lig1O8mjnJ8OsDwdWFvAg&usqp=CAU"
+    )
     val storyList = listOf(
         originStory,
         originStory.copy(
