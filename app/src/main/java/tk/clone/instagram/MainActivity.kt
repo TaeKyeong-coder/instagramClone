@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,6 +15,7 @@ import tk.clone.instagram.view.InstagramHome
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             InstagramTheme {
                 // A surface container using the 'background' color from the theme
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    Greeting()
                 }
             }
         }
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun Greeting() {
     InstagramHome()
 }
 
@@ -39,6 +39,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     InstagramTheme {
-        Greeting("Android")
+        Greeting()
     }
 }

@@ -1,6 +1,8 @@
 package tk.clone.instagram.view
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
 import androidx.compose.material.IconToggleButton
@@ -16,11 +18,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.guru.fontawesomecomposelib.FaIcon
 import com.guru.fontawesomecomposelib.FaIcons
 import com.skydoves.landscapist.glide.GlideImage
 import tk.clone.instagram.data.Story
+import tk.clone.instagram.data.StoryDummyData
 
 @Composable
 fun InstagramListItem(post: Story) {
@@ -53,7 +57,8 @@ fun ProfileInfoSection(post: Story) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         GlideImage(
-            imageModel = post.authorImageUrl, modifier = Modifier
+            imageModel = post.authorImageUrl,
+            modifier = Modifier
                 .size(32.dp)
                 .clip(CircleShape),
             contentDescription = null,
@@ -78,7 +83,7 @@ fun InstagramImage(imageId: String?) {
             imageModel = imageId,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(450.dp),
+                .height(300.dp),
             contentDescription = null,
             contentScale = ContentScale.Crop
         )
@@ -127,4 +132,14 @@ fun InstagramLikesSection(post: Story) {
             modifier = Modifier.padding(start = 8.dp)
         )
     }
+}
+
+@Preview
+@Composable
+fun ItemPreview(){
+    val post = remember { StoryDummyData.storyList.filter { true } }
+    ProfileInfoSection(post[0])
+//    InstagramListItem(post = post[0])
+    // InstagramImage(imageId = post[0].storyImageUrl)
+    //InstagramLikesSection(post[0])
 }

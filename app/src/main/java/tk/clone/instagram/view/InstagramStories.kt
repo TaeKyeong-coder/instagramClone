@@ -83,14 +83,3 @@ fun StoryListItem(post: Story) {
         Text(text = post.author, style = typography.caption, textAlign = TextAlign.Center)
     }
 }
-
-//미리보기
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    InstagramTheme {
-        val posts = remember { StoryDummyData.storyList }
-//        InstagramStories(posts)
-        InstagramStories()
-    }
-}
