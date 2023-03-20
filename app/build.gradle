@@ -63,7 +63,7 @@ dependencies {
 
     //use Glide
     implementation "com.github.skydoves:landscapist-glide:1.4.7"
-    'com.github.bumptech.glide:compiler:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.0'
 
     //Icon
     implementation 'com.github.Gurupreet:FontAwesomeCompose:1.0.0'
