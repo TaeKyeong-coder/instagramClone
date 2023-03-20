@@ -26,7 +26,7 @@ import tk.clone.instagram.data.Story
 fun InstagramListItem(post: Story) {
     Column() {
         ProfileInfoSection(post)
-        InstagramImage(imageId = post.authorImageUrl)
+        InstagramImage(imageId = post.storyImageUrl)
         InstagramIconSection()
         InstagramLikesSection(post)
         Text(

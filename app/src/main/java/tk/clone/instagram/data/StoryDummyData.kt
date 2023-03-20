@@ -4,8 +4,8 @@ object StoryDummyData {
     val originStory = Story(
         1,
         "참고 : https://www.youtube.com/watch?v=ps4Ay7XFidM",
-        "Taegomi",
-        "@taegomi",
+        "taegomi33",
+        "@taegomi33",
         "17m",
         "https://avatars.githubusercontent.com/u/68893329?v=4",
         100,
@@ -17,7 +17,7 @@ object StoryDummyData {
     val storyList = listOf(
         originStory,
         originStory.copy(
-            id = 2, author = "Google", handle = "@google",
+            id = 2, author = "ming_chu85", handle = "@ming_chu85",
             authorImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg7CvT_Z8DsZYjgUn08B5duYhsJRUllhlvSw&usqp=CAU",
             storyImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlryBnMRle_5jHRxyTOpOFmXRgezPHh6lS3w&usqp=CAU",
             time = "11m"
